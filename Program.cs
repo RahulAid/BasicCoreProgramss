@@ -5,17 +5,21 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter Dividend value : ");
-            int Dividend = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Divisor value : ");
-            int Divisor = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter two numbers : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
 
-            int Quotient = Dividend / Divisor;
-            int Remainder = Dividend % Divisor;
+            Console.WriteLine("Initial value of a is :" + a);
+            Console.WriteLine("Initial value of b is :" + b);
 
-            Console.WriteLine("The Quotient is : " + Quotient);
-            Console.WriteLine("The Remainder is : " + Remainder);
-            Console.ReadLine();
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            Console.WriteLine("------------ After Swapping ---------------");
+
+            Console.WriteLine("New value of a is :" + a);
+            Console.WriteLine("New value of b is :" + b);
 
         }
     }
