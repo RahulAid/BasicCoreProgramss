@@ -5,18 +5,23 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter a number: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-
-            if (num % 2 == 0)
+            Console.WriteLine("Enter three numbers : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            int Largest = 0;
+            if (a > b && a > c)
             {
-                Console.WriteLine(+num + " is an Even Number");
+                Largest = a;
+            }
+            else if (b > a && b > c)
+            {
+                Largest = b;
             }
             else
-            {
-                Console.WriteLine(+num + " is an Odd Number");
-            }
-            Console.ReadLine();
+                Largest = c;
+
+            Console.WriteLine("Largest among " + a + " , " + b + " and " + c + " is : " + Largest);
 
 
         }
