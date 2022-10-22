@@ -5,35 +5,17 @@
         static void Main(string[] args)
         {
 
-            double tailcount = 0;
-            double headcount = 0;
-            Console.WriteLine("Enter the no. of times to flip a coin");
-            int loopCount = Convert.ToInt32(Console.ReadLine());
-            int loop = loopCount;
-            int i = 1;
+            Console.WriteLine("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
 
-            while (i <= loop)
+            if (num % 2 == 0)
             {
-                Random random = new Random();
-                double coinflip = random.Next(0, 2);
-
-                if (coinflip < 0.5)
-                {
-                    tailcount++;
-                }
-                else
-                {
-                    headcount++;
-                }
-                i++;
-
-
+                Console.WriteLine(+num + " is an Even Number");
             }
-            double Tailpercentage = (tailcount / loop) * 100;
-            double Headpercentage = (headcount / loop) * 100;
-
-            Console.WriteLine("The occurence percentage of heads is: " + Headpercentage + " % ");
-            Console.WriteLine("The occurence percentage of tails is: " + Tailpercentage + " % ");
+            else
+            {
+                Console.WriteLine(+num + " is an Odd Number");
+            }
             Console.ReadLine();
 
 
