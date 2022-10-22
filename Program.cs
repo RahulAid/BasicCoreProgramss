@@ -5,24 +5,20 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter three numbers : ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
-            int Largest = 0;
-            if (a > b && a > c)
+            Console.WriteLine("Enter a four digit number");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (((num % 4 == 0) && (num % 100 != 0)) || (num % 400 == 0))
             {
-                Largest = a;
-            }
-            else if (b > a && b > c)
-            {
-                Largest = b;
+                Console.WriteLine(+num + " is a Leap Year ");
+
             }
             else
-                Largest = c;
-
-            Console.WriteLine("Largest among " + a + " , " + b + " and " + c + " is : " + Largest);
-
+            {
+                Console.WriteLine(+num + " is not a Leap Year");
+            }
+            
+            Console.ReadLine();
 
         }
     }
