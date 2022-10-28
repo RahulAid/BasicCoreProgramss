@@ -5,21 +5,31 @@
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter two numbers : ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter an Alphabet from a to z : ");
+            char n = Convert.ToChar(Console.ReadLine());
 
-            Console.WriteLine("Initial value of a is :" + a);
-            Console.WriteLine("Initial value of b is :" + b);
-
-            a = a + b;
-            b = a - b;
-            a = a - b;
-
-            Console.WriteLine("------------ After Swapping ---------------");
-
-            Console.WriteLine("New value of a is :" + a);
-            Console.WriteLine("New value of b is :" + b);
+            switch (n)
+            {
+                case 'a':
+                    Console.WriteLine(n+" is a Vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine(n+" is a Vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine(n+" is a Vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine(n+" is a Vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine(n+" is a Vowel");
+                    break;
+                default:
+                    Console.WriteLine(n+" is a Consonant");
+                    break;
+            }
+            Console.ReadLine();
 
         }
     }
