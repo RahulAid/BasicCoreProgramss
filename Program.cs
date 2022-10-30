@@ -2,21 +2,24 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        
+        static void Main(String[] args)
         {
-
-            Console.WriteLine("Enter a Number whose Powers are to be calculated : ");
-            long N = Convert.ToInt32(Console.ReadLine());
-            int num = 1;
-            Console.WriteLine("The powers of " + N + " are");
-            for (int i = 2; i < N; i++)
+            Console.WriteLine("Enter a value: ");
+            int Num = Convert.ToInt32(Console.ReadLine());
+            int i;
+            
+            for (i = 2; i <= Num; i++)
             {
-                 num = num * 2;
-                if ( num < N)
+                if (Num % i == 0)
                 {
-                    Console.WriteLine(num);
+                    Console.WriteLine(i+" is a Factor of " + Num);
+
                 }
-                
+                else
+                {
+                    Console.WriteLine(i + " is not a Factor of " + Num);
+                }
             }
             Console.ReadLine();
 
